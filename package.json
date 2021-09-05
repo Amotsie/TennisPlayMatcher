@@ -1,0 +1,18 @@
+{
+  "name": "derivco-grad-task",
+  "version": "1.0.0",
+  "description": "A solution to a task given by Dirvico as part of graduate assesment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "csv": "node csvReader.js"
+  },
+  "keywords": [],
+  "author": "Andread Motsie",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1"
+  }
+}

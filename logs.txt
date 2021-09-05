@@ -1,0 +1,46 @@
+
+  Sun Sep 05 2021 @ 03:12:39 [CSV File read]
+  The following is ommited:
+  {
+  "name": "kimberly",
+  "gender": "fg"
+}
+  "Invalid gender specification."
+
+  Sun Sep 05 2021 @ 03:12:39 [CSV File read]
+  The following is ommited:
+  {
+  "name": "Tommy",
+  "gender": " m",
+  "_2": "6"
+}
+  "Invalid input format line"
+
+  Sun Sep 05 2021 @ 03:12:39 [CSV File read]
+  The following is ommited:
+  {
+  "name": "jaso2n",
+  "gender": "m"
+}
+  "Invalid input, Only letters A-Z allowed."
+
+  Sun Sep 05 2021 @ 03:15:52 [CSV File read]
+  Males: 
+  Females: kimberly
+  "cannot run compare function, males or females list empty."
+
+  Sun Sep 05 2021 @ 03:27:36 [CSV File read]
+  The following is ommited:
+  {
+  "name": "jaso2n",
+  "gender": "m"
+}
+  "Invalid input, Only letters A-Z allowed."
+
+  Sun Sep 05 2021 @ 12:05:55 [CSV File read]
+  The following is ommited:
+  {
+  "name": "jaso2n",
+  "gender": "m"
+}
+  "Invalid input, Only letters A-Z allowed."

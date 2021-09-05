@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis Matcher</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(103, 168, 168);
+    }
+    .main-content {
+      width: 90%;
+      height: 15rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      border: 1px solid black;
+      width: 60%;
+      min-width: 250px;
+      height: 7rem;
+      margin: 0 auto 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .gr {
+      margin: 5px 0;
+    }
+    #log {
+      padding: 2px;
+      font-size: large;
+    }
+  </style>
+  <body>
+    <div class="main-content">
+      <h2>Tennis Players Matcher</h2>
+      <form>
+        <div class="gr">
+          <label for="player1">Player 1:</label>
+          <input type="text" id="player1" name="player1" />
+        </div>
+        <div class="gr">
+          <label for="Player2">Player 2:</label>
+          <input type="text" id="player2" name="player2" />
+        </div>
+        <input id="submit" type="submit" value="Match" />
+      </form>
+      <div id="log"></div>
+    </div>
+
+    <script>
+      const log = document.getElementById("log");
+      const btn = document.getElementById("submit");
+
+      btn.addEventListener("click", logSubmit);
+
+      async function logSubmit(e) {
+        event.preventDefault();
+        let name1 = document.getElementById("player1").value;
+        let name2 = document.getElementById("player2").value;
+
+        if (name1.trim() == "" || name2.trim() == "") {
+          log.textContent = "Please fill both Players names";
+          return;
+        }
+        if (!onlyLetter(name1) || !onlyLetter(name2)) {
+          log.textContent = "Invalid input, Only English letters A-Z allowed";
+          return;
+        }
+
+        data = {
+          player1: name1,
+          player2: name2,
+        };
+
+        fetch("http://localhost:3000/match", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            log.textContent = data.msg;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+      function onlyLetter(inputtxt) {
+        var letters = /^[A-Za-z]+$/;
+        if (inputtxt.match(letters)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

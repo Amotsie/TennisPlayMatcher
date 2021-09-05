@@ -1,0 +1,33 @@
+
+Sun Sep 05 2021 @ 02:28:10 [CSV File read]
+
+Males: jason,billy,tommy,zack
+Females: kimberly,trini,billy
+
+"zack" matches "kimberly 91%", good match.
+"billy" matches "trini 71%".
+"jason" matches "trini 71%".
+"jason" matches "billy 71%".
+"zack" matches "trini 70%".
+"billy" matches "billy 62%".
+"tommy" matches "trini 62%".
+"zack" matches "billy 61%".
+"tommy" matches "billy 53%".
+"billy" matches "kimberly 20%".
+"jason" matches "kimberly 20%".
+"tommy" matches "kimberly 20%".
+
+----------------------------------------------------------------------------------
+Sun Sep 05 2021 @ 03:12:39 [CSV File read]
+
+Males: jason,billy,zack
+Females: trini,billy
+
+"billy" matches "trini 71%".
+"jason" matches "trini 71%".
+"jason" matches "billy 71%".
+"zack" matches "trini 70%".
+"billy" matches "billy 62%".
+"zack" matches "billy 61%".
+
+----------------------------------------------------------------------------------
